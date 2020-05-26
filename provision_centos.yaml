@@ -1,0 +1,8 @@
+labels:
+  osid: centos
+actions:
+  - pkg: yum-utils device-mapper-persistent-data lvm2
+  - pkg:
+      location: https://download.docker.com/linux/centos/docker-ce.repo
+      names: docker-ce docker-ce-cli containerd.io
+  - shell: systemctl enable docker && systemctl start docker
