@@ -1,9 +1,6 @@
 schema-version: 1.0
 
-var:
-  user: default
-
 provision:
   - user:
-      name: "{% user %}"
+      name: "{% xbeeUser %}"
       group: docker
